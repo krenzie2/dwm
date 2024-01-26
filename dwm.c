@@ -1427,7 +1427,7 @@ runautostart(void)
 		pathpfx = ecalloc(1, strlen(home) + strlen(localshare)
 		                     + strlen(dwmdir) + 3);
 
-		if (sprintf(pathpfx, "%s/%s", home, dwmdir) < 0) {
+		if (sprintf(pathpfx, "%s/%s/%s", home, localshare, dwmdir) < 0) {
 			free(pathpfx);
 			return;
 		}
